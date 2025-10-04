@@ -51,6 +51,9 @@ Thumbs.db
 *.cache
 *.swp
 *.swo
+*.log.*
+*.gz
+
 
 ### === Environment & Credentials (VERY IMPORTANT) ===
 # Keep your secrets safe!
