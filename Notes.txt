@@ -1,0 +1,75 @@
+--> The below error comes when you have not authorize. so, generate token first then post
+
+ cache-control: no-cache,no-store,max-age=0,must-revalidate 
+ connection: keep-alive 
+ content-length: 0 
+ date: Tue,26 Aug 2025 17:40:49 GMT 
+ expires: 0 
+ keep-alive: timeout=60 
+ pragma: no-cache 
+ www-authenticate: Bearer 
+ x-content-type-options: nosniff 
+ x-xss-protection: 0 
+
+
+-------------------------------------------------------------------------------------
+
+--> Response headers and their meaning:-
+--  These are HTTP response headers that the server sends back to your client (browser, Postman, etc.) along with the actual response body. 
+    Each header gives metadata about how the response should be handled.
+
+cache-control: no-cache,no-store,max-age=0,must-revalidate
+connection: keep-alive
+content-type: application/json
+date: Tue,26 Aug 2025 17:43:07 GMT
+expires: 0
+keep-alive: timeout=60
+pragma: no-cache
+transfer-encoding: chunked
+x-content-type-options: nosniff 
+x-xss-protection: 0
+
+
+cache-control: no-cache,no-store,max-age=0,must-revalidate
+    Tells the browser not to cache this response.
+    no-cache: Client must revalidate with the server before using a cached response.
+    no-store: Response must not be stored anywhere (browser cache, proxy, etc.).
+    max-age=0: Response is immediately stale.
+    must-revalidate: Even if cached, the client must check with server before reuse.
+    ✅ Used often for security-sensitive data (e.g., banking, JWT token responses).
+
+connection: keep-alive
+    Keeps the TCP connection open so multiple requests can reuse it instead of reconnecting.
+    Improves performance.
+
+content-type: application/json
+    Response body is in JSON format.
+    Client knows how to parse the data.
+
+date: Tue, 26 Aug 2025 17:43:07 GMT
+    The server’s timestamp when it generated the response.
+
+expires: 0
+    Marks the response as already expired.
+    Works along with cache-control to prevent caching.
+
+keep-alive: timeout=60
+    Informs the client that the server will keep the connection alive for 60 seconds.
+    After that, the connection may be closed.
+
+pragma: no-cache
+    Legacy HTTP/1.0 version of cache-control: no-cache.
+    Kept for backward compatibility.
+
+transfer-encoding: chunked
+    Response body is sent in chunks instead of a single block.
+    Useful when the server doesn’t know the response size in advance.
+
+x-content-type-options: nosniff
+    Prevents the browser from MIME-type sniffing.
+    Ensures content is interpreted strictly as application/json.
+    Security measure against certain attacks.
+
+x-xss-protection: 0
+    Disables older browser’s built-in XSS (cross-site scripting) filter.
+    Often set by modern apps because the filter was buggy, and better protection is expected via CSP (Content Security Policy).

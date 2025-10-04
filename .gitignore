@@ -1,0 +1,73 @@
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### === Spring Boot / Maven Build ===
+/build/
+/out/
+/logs/
+/tmp/
+/hs_err_pid*
+/replay_pid*
+
+### === STS (Spring Tool Suite) ===
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### === IntelliJ IDEA ===
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### === NetBeans ===
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### === VS Code ===
+.vscode/
+
+### === OS Specific ===
+.DS_Store
+Thumbs.db
+
+### === Logs & Temp Files ===
+*.log
+*.tmp
+*.out
+*.cache
+*.swp
+*.swo
+
+### === Environment & Credentials (VERY IMPORTANT) ===
+# Keep your secrets safe!
+application.properties
+application.yml
+application-dev.properties
+application-prod.properties
+.env
+
+### === Java Binary Files ===
+*.class
+*.jar
+*.war
+*.ear
+
+### === Misc ===
+# Avoid committing generated or backup files
+*.bak
+*.old
+*.orig
